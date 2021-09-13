@@ -1,0 +1,18 @@
+<main>
+  <ul>
+      <li><h2><a [routerLink]="['seguros-en-linea']">Seguros En linea</a></h2></li>
+  </ul>
+  <ul>
+      <li><h2><a [routerLink]="['seguros-en-linea/seguro-accidentes-personales/accidents/information']">Cotizacion</a></h2></li>
+  </ul>
+</main>
+
+<div style="border: blue solid 4px">
+    <p>Data from Parent: {{dataFromParent}}</p>
+    
+    <input [(ngModel)]="input" [value]="input" (keydown.enter)="send()">
+  </div>
+
+  <router-outlet></router-outlet>
+
+

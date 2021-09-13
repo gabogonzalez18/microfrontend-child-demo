@@ -5,19 +5,25 @@ import { AppComponent } from './app.component';
 import {SampleModule} from './sample/sample.module';
 import {createCustomElement} from '@angular/elements';
 import {SampleComponent} from './sample/sample.component';
+import { HomeComponent } from './home/home.component';
+import { PersonalAccidentsComponent } from './modules/personal-accidents/personal-accidents.component';
+import { AppRoutingModule } from './app-routing.module';
 
 const local = false;
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    PersonalAccidentsComponent
   ],
   imports: [
     BrowserModule,
-    SampleModule
+    SampleModule,
+    AppRoutingModule
   ],
   providers: [],
   entryComponents: [SampleComponent],
-  bootstrap: [local ? AppComponent : []]
+  bootstrap: [local ? AppComponent : []],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {

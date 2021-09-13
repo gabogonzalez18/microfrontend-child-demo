@@ -2,12 +2,7 @@ import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges
 
 @Component({
   selector: 'app-sample',
-  template: `
-  <div style="border: blue solid 1px">
-    <p>Data from Parent: {{dataFromParent}}</p>
-    <input [(ngModel)]="input" [value]="input" (keydown.enter)="send()">
-  </div>
-  `,
+  templateUrl: './sample.component.html',
   styles: []
 })
 export class SampleComponent implements OnChanges, OnInit {
@@ -18,6 +13,8 @@ export class SampleComponent implements OnChanges, OnInit {
   constructor() { }
 
   send() {
+    console.log('send --->');
+    
     this.emitDataToParent.emit(this.input);
     this.input = '';
   }
@@ -25,7 +22,9 @@ export class SampleComponent implements OnChanges, OnInit {
   ngOnInit(): void {
     if (this.ifLoaded) {
       // this code is only going to be run once
-      console.log(this.dataFromParent);
+      if (this.dataFromParent) {
+        console.log(this.dataFromParent);
+      }
     }
   }
 
