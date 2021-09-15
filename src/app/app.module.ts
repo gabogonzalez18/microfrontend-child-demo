@@ -17,7 +17,7 @@ const local = false;
     PersonalAccidentsComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     SampleModule,
     AppRoutingModule
   ],
