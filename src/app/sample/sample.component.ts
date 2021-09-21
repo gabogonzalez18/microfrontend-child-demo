@@ -14,6 +14,8 @@ export class SampleComponent implements OnChanges, OnInit {
 
   send() {
     console.log('send --->');
+    console.log('send 2---->');
+    
     
     this.emitDataToParent.emit(this.input);
     this.input = '';
