@@ -14,7 +14,7 @@ export class SampleComponent implements OnChanges, OnInit {
 
   send() {
     console.log('send --->');
-    console.log('send 2---------->');
+    console.log('send 2--------->');
     
     
     this.emitDataToParent.emit(this.input);
@@ -25,7 +25,7 @@ export class SampleComponent implements OnChanges, OnInit {
     if (this.ifLoaded) {
       // this code is only going to be run once
       if (this.dataFromParent) {
-        console.log(this.dataFromParent);
+        console.log('dataFromParent',this.dataFromParent);
       }
     }
   }
