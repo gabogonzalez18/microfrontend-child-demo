@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SampleComponent } from './sample.component';
 import {FormsModule} from '@angular/forms';
-import { PersonalAccidentsModule } from '../modules/personal-accidents/personal-accidents.module';
 import { SampleRoutingModule } from './sample-routing.module';
 
 @NgModule({
@@ -13,8 +12,7 @@ import { SampleRoutingModule } from './sample-routing.module';
   imports: [
     CommonModule,
     FormsModule,
-    PersonalAccidentsModule,
-    SampleRoutingModule
+    SampleRoutingModule,
   ]
 })
 export class SampleModule { }
